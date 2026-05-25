@@ -1,29 +1,23 @@
 # Domain Docs
 
-How the engineering skills should consume this repo's domain documentation when exploring the codebase.
+Este repo usa un modelo single-context para consumo de agentes: existe un solo conjunto de documentos de dominio compartidos.
 
-## Before exploring, read these
+## Leer antes de explorar
 
-- `CONTEXT.md` at the repo root.
-- `docs/adr/` for architecture decisions relevant to the area being changed.
+- [../product/ers.md](../product/ers.md)
+- [../../CONTEXT-MAP.md](../../CONTEXT-MAP.md)
+- [../../src/mission-design/CONTEXT.md](../../src/mission-design/CONTEXT.md)
+- [../../src/session-operations/CONTEXT.md](../../src/session-operations/CONTEXT.md)
+- [../../src/scoring-audit/CONTEXT.md](../../src/scoring-audit/CONTEXT.md)
+- [../../src/identity-access/CONTEXT.md](../../src/identity-access/CONTEXT.md)
+- `docs/architecture/adr/` cuando exista y sea relevante
 
-If these files don't exist yet, proceed silently.
+## Uso esperado
 
-## File structure
+- El `ERS` define alcance y requerimientos.
+- `CONTEXT-MAP.md` define relaciones entre bounded contexts.
+- Cada `src/*/CONTEXT.md` define el vocabulario permitido en su contexto.
 
-This repo is configured as a single-context repo:
+## Regla principal
 
-```
-/
-|- CONTEXT.md
-|- docs/adr/
-`- src/
-```
-
-## Use the glossary's vocabulary
-
-When naming domain concepts, prefer the terms defined in `CONTEXT.md`.
-
-## Flag ADR conflicts
-
-If a proposal or change contradicts an existing ADR, surface that explicitly instead of silently overriding it.
+Cuando un término del ERS choque con el lenguaje del contexto, priorizar señalar la discrepancia y no mezclar conceptos.
