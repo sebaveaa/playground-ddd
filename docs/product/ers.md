@@ -17,11 +17,15 @@ Existen dos superficies principales:
 ## Decisiones estables del enunciado
 
 - Arquitectura limpia o hexagonal.
-- Separación CQRS.
+- Separación CQRS implementada con `MediatR`.
+- `CQRS` se aplica a nivel lógico de comandos y consultas, sin separar bases de datos de escritura y lectura.
 - Persistencia relacional.
-- Comunicación en tiempo real.
+- Comunicación en tiempo real implementada con `SignalR`.
 - Mensajería asíncrona.
 - Roles `Administrator`, `Operator` y `Participant`.
+- Identidad y acceso gestionados con `Keycloak`.
+- Autenticación basada en tokens `JWT` emitidos por `Keycloak`.
+- Autorización basada en roles y permisos definidos en `Keycloak` y consumidos desde los claims del token.
 - La experiencia del participante ocurre en móvil.
 - El diseño reusable de la misión está separado de la operación en vivo.
 
@@ -42,16 +46,13 @@ Existen dos superficies principales:
 - Las penalizaciones deben registrar motivo y momento.
 - Al finalizar la sesión se revelan pistas y soluciones.
 
-## Ambigüedades abiertas del ERS
+## Decisiones aclaradas del ERS
 
 ### Trivia
 
-El enunciado mezcla dos formulaciones:
-
-- validación automática con intervención manual solo en casos ambiguos
-- validación manual por operador tras registrar respuesta pendiente
-
-Hasta que esto se cierre, los agentes deben tratarlo como contradicción del enunciado y no como una verdad resuelta.
+- La validación de respuestas de `Trivia` ocurre automáticamente por defecto.
+- El `Operator` puede corregir el resultado cuando detecte que la respuesta enviada corresponde a una alternativa válida.
+- No debe modelarse `Trivia` como un flujo donde toda evidencia entra primero en estado `Pending` para revisión humana obligatoria.
 
 ## Uso esperado
 
