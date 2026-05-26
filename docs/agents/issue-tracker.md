@@ -2,6 +2,10 @@
 
 Issues and PRDs for this repo live in Linear. Use Linear as the source of truth for planning, triage, and work tracking.
 
+Primary backlog project:
+
+- [UMBRAL MVP Backlog](https://linear.app/umbralsv/project/umbral-mvp-backlog-06582636352e)
+
 ## Conventions
 
 - Create issues in Linear rather than GitHub or local markdown.

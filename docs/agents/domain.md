@@ -20,4 +20,4 @@ Este repo usa un modelo single-context para consumo de agentes: existe un solo c
 
 ## Regla principal
 
-Cuando un término del ERS choque con el lenguaje del contexto, priorizar señalar la discrepancia y no mezclar conceptos.
+Cuando un termino del ERS choque con el lenguaje del contexto, priorizar senalar la discrepancia y no mezclar conceptos.

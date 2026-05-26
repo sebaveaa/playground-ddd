@@ -1,5 +1,7 @@
 ## Agent skills
 
+Read this file first. Then follow the referenced documents in the order described here.
+
 ### Issue tracker
 
 Issues are tracked in Linear using the workflow described in `docs/agents/issue-tracker.md`.
@@ -15,6 +17,15 @@ This repo is configured as single-context. See `docs/agents/domain.md`.
 ### Operating model
 
 All agents should follow `docs/agents/operating-model.md`.
+For implementation or review work, treat `docs/agents/operating-model.md` as the baseline contribution policy for branching, commits, PR scope, testing expectations, naming, code quality, and documentation updates.
+
+### Engineering standards
+
+When the task involves writing, refactoring, or reviewing code:
+
+- Read the relevant ADRs in `docs/architecture/adr/` before changing code when they apply to the affected area.
+- Apply `.agents/skills/engineering-guardrails/` as the default reusable procedure for implementation and review guardrails.
+- Use `src/*/CONTEXT.md` as the source of truth for ubiquitous language and bounded-context terminology.
 
 ### Product and architecture
 

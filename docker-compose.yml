@@ -1,0 +1,4 @@
+# Compatibility entrypoint for local development.
+# Prefer `docker compose -f docker-compose.dev.yml ...`.
+include:
+  - docker-compose.dev.yml
