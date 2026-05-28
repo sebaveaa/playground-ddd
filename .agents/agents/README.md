@@ -1,6 +1,6 @@
 # Agent Docs
 
-`docs/agents/` contiene contratos operativos para agentes, no documentación detallada del producto ni una estructura futura del código.
+`.agents/agents/` contiene contratos operativos para agentes, no documentación detallada del producto ni una estructura futura del código.
 
 ## Objetivo
 
@@ -14,8 +14,8 @@
 - [domain.md](domain.md)
 - [issue-tracker.md](issue-tracker.md)
 - [triage-labels.md](triage-labels.md)
-- [../product/ers.md](../product/ers.md)
-- [../architecture/repo-structure.md](../architecture/repo-structure.md)
+- [../../docs/product/ers.md](../../docs/product/ers.md)
+- [../../docs/architecture/repo-structure.md](../../docs/architecture/repo-structure.md)
 - [../../CONTEXT-MAP.md](../../CONTEXT-MAP.md)
 
 ## Agentes

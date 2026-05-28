@@ -14,19 +14,22 @@ Mapa operativo de la documentacion del proyecto UMBRAL: que vive en cada carpeta
 |  |- ERS UMBRAL .md
 |  `- mapeo de Specs.md
 |- docs/
-|  |- agents/
 |  |- architecture/
 |  `- product/
 |- infra/
 |  |- keycloak/
 |  `- postgres/
 |- src/
-|  |- edge-proxy/
-|  |- identity-access/
-|  |- mission-design/
-|  |- scoring-audit/
-|  `- session-operations/
+|  |- apps/
+|  |  |- edge-proxy/
+|  |  `- web/
+|  `- services/
+|     |- identity-access/
+|     |- mission-design/
+|     |- scoring-audit/
+|     `- session-operations/
 `- .agents/
+   |- agents/
    `- skills/
 ```
 
@@ -38,11 +41,12 @@ Mapa operativo de la documentacion del proyecto UMBRAL: que vive en cada carpeta
 | `README/Enunciado Original Proyecto Umbral.md` | marco academico base | lineamientos del curso, alcance docente, criterios de evaluacion | verdad operativa si contradice al ERS detallado |
 | `docs/product/ers.md` | SSoT operativo resumido | resumen normalizado del ERS, aclaratorias resueltas, decisiones funcionales cerradas | detalle extenso del documento academico completo |
 | `docs/product/open-questions.md` | ambiguedades abiertas | dudas pendientes y contradicciones | decisiones ya cerradas |
-| `src/*/CONTEXT.md` | lenguaje del dominio | terminos canonicos, significado, limites y relaciones semanticas | librerias, frameworks o estructura de carpetas |
+| `src/services/*/CONTEXT.md` | lenguaje del dominio | terminos canonicos, significado, limites y relaciones semanticas | librerias, frameworks o estructura de carpetas |
+| `src/apps/*` | entrypoints tecnicos y frontend | borde tecnico, front web, adaptadores de entrada | lenguaje de dominio o reglas de negocio |
 | `CONTEXT-MAP.md` | mapa entre contextos | bounded contexts y relaciones | detalle interno de cada contexto |
 | `docs/architecture/adr/*.md` | decisiones dificiles de revertir | trade-offs y consecuencias | reglas triviales o detalles temporales |
 | `docs/architecture/repo-structure.md` | estructura real del repo | carpetas existentes y convenciones | estructura deseada que todavia no existe |
-| `docs/agents/*.md` | contrato operativo de agentes | que leer, que hacer, que no asumir | logica de dominio duplicada |
+| `.agents/agents/*.md` | contrato operativo de agentes | que leer, que hacer, que no asumir | logica de dominio duplicada |
 | `.agents/skills/*` | procedimientos reutilizables | workflows, checklists y guias de actualizacion | fuente de verdad de producto |
 | Linear | backlog vivo | issues, estado, triage y planificacion | documentacion estable de arquitectura o dominio |
 
@@ -55,7 +59,7 @@ Cuando haya conflicto entre fuentes:
 3. `src/*/CONTEXT.md` manda sobre vocabulario.
 4. `docs/architecture/adr/*.md` manda sobre decisiones arquitectonicas aceptadas.
 5. Linear manda sobre estado de backlog y trabajo pendiente.
-6. `docs/agents` y `.agents/skills` deben adaptarse a lo anterior.
+6. `.agents/agents` y `.agents/skills` deben adaptarse a lo anterior.
 
 ## 4. Donde se ponen restricciones tecnicas
 
@@ -85,7 +89,7 @@ Editar en este orden:
 3. `docs/product/open-questions.md` si se cierra o abre una ambiguedad
 4. `src/*/CONTEXT.md` solo si cambia significado de un termino
 5. ADR solo si arrastra una decision arquitectonica relevante
-6. `docs/agents/*.md` si altera como deben trabajar los agentes
+6. `.agents/agents/*.md` si altera como deben trabajar los agentes
 7. Linear si cambia alcance de issues existentes
 
 ### Cambia una decision arquitectonica
@@ -95,7 +99,7 @@ Editar en este orden:
 1. `docs/architecture/adr/*.md`
 2. `docs/architecture/repo-structure.md` si cambia organizacion real
 3. `docs/product/ers.md` si impacta comportamiento operativo
-4. `docs/agents/*.md`
+4. `.agents/agents/*.md`
 5. skills afectadas
 6. Linear si cambia el backlog
 
@@ -103,7 +107,7 @@ Editar en este orden:
 
 Editar en este orden:
 
-1. `src/*/CONTEXT.md`
+1. `src/services/*/CONTEXT.md`
 2. `CONTEXT-MAP.md` si cambian relaciones
 3. `docs/product/glossary.md`
 4. `docs/product/ers.md` si usa el termino
@@ -119,7 +123,7 @@ Editar:
 
 1. `AGENTS.md`
 2. `CLAUDE.md` solo si hay delta especifico de Claude
-3. `docs/agents/*.md`
+3. `.agents/agents/*.md`
 4. `.agents/skills/*`
 
 ## 6. Arbol de decision rapido

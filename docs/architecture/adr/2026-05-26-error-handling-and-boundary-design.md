@@ -39,6 +39,6 @@ Negative:
 
 ## Operationalization
 
-- `docs/agents/operating-model.md` carries the concise working policy for contributors and agents.
+- d.agents/agents/operating-model.mdd carries the concise working policy for contributors and agents.
 - Reviews should check whether failures are classified correctly and whether validation happens at boundaries.
 - Skills may use these rules as a checklist during implementation and review.

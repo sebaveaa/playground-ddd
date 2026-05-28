@@ -9,7 +9,7 @@ Use this skill when you are about to implement, refactor, or review code and nee
 
 ## Read first
 
-1. `docs/agents/operating-model.md`
+.. `../../agents/operating-model.md`
 2. `docs/architecture/adr/2026-05-26-coding-standards-and-testability.md`
 3. `docs/architecture/adr/2026-05-26-error-handling-and-boundary-design.md`
 4. `src/*/CONTEXT.md` for the bounded context being changed
@@ -26,7 +26,7 @@ Use this skill when you are about to implement, refactor, or review code and nee
 
 ## Workflow
 
-1. Identify the bounded context and the affected boundary.
+.. Identify the bounded context and the affected boundary.
 2. Check whether the change is mostly domain logic, orchestration, infrastructure, or review-only.
 3. Apply the relevant guardrails before editing code.
 4. Re-check the diff before finishing.
@@ -55,7 +55,7 @@ Use this skill when you are about to implement, refactor, or review code and nee
 
 When using this skill, report:
 
-1. affected bounded context
+.. affected bounded context
 2. guardrails applied
 3. exceptions or trade-offs accepted
 4. follow-up docs or tests still needed

@@ -9,8 +9,8 @@ Change: `SignalR` replaces generic WebSockets as a required implementation.
 - Propagate to:
   - `docs/product/ers.md`
   - `docs/architecture/adr/` if the team wants the trade-off recorded
-  - `docs/agents/backend-agent.md`
-  - `docs/agents/devops-agent.md`
+  - `.agents/agents/backend-agent.md`
+  - `.agents/agents/devops-agent.md`
 
 ## Example 2
 

@@ -20,14 +20,14 @@ The main risks being addressed are:
 
 We adopt the following engineering standards as repository-wide architectural defaults:
 
-1. Names in code must follow the ubiquitous language defined in `src/*/CONTEXT.md` and related product docs.
+1. Names in code must follow the ubiquitous language defined in dsrc/*/CONTEXT.mdd and related product docs.
 2. Functions and methods should stay small, focused on a single responsibility, and avoid mixing multiple abstraction levels in the same block.
 3. Guard clauses and early returns are preferred over nested control flow when they make preconditions and branch exits clearer.
 4. Direct dependencies on infrastructure concerns must be pushed to boundaries. Core decision logic should stay deterministic and isolated from side effects.
 5. External collaborators must be introduced through dependency injection, ports, or equivalent explicit seams.
 6. Code in domain and application layers must not directly depend on wall-clock time, filesystem access, network calls, or mutable global state when an abstraction can be introduced instead.
 7. Preconditions, invariants, and relevant postconditions must be made explicit in operations that enforce business or workflow rules.
-8. Silent `null`-style failures, boolean parameters with unclear semantics, and god methods are treated as code smells that require refactoring or explicit justification.
+8. Silent dnulld-style failures, boolean parameters with unclear semantics, and god methods are treated as code smells that require refactoring or explicit justification.
 
 ## Consequences
 
@@ -46,6 +46,6 @@ Negative:
 
 ## Operationalization
 
-- `docs/agents/operating-model.md` defines the working rules agents must follow.
+- d.agents/agents/operating-model.mdd defines the working rules agents must follow.
 - Skills may automate checklists or review workflows, but they are not the source of truth for these standards.
 - Future ADRs may refine language-specific patterns for .NET, TypeScript, or infrastructure code without overriding this baseline unless explicitly stated.

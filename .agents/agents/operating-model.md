@@ -64,6 +64,6 @@ Leer en este orden:
 ## Estado actual del repo
 
 - `src/` contiene el mapa de contextos del proyecto y su lenguaje.
-- `.agents/` contiene skills y utilidades del runtime.
-- `docs/agents/` contiene agentes esperados para la construccion del proyecto.
+- `.agents/` contains agents, skills, and runtime utilities.
+- `.agents/agents/` contains agentes esperados para la construccion del proyecto.
 - El repo todavia no define la estructura final de implementacion del monorepo.

@@ -7,7 +7,7 @@ description: Routes project changes to the correct spec files and documents the 
 
 ## Quick start
 
-Read [../../../mapeo de Specs.md](../../../mapeo%20de%20Specs.md) first.
+Read [../../../README/mapeo de Specs.md](../../../README/mapeo%20de%20Specs.md) first.
 
 Then classify the change into one of these buckets:
 
@@ -21,12 +21,12 @@ Then classify the change into one of these buckets:
 
 1. Identify the source of truth that changed.
 2. Update that source first.
-3. Follow the propagation path in `mapeo de Specs.md`.
+3. Follow the propagation path in `README/mapeo de Specs.md`.
 4. Check whether the change also affects:
    - `docs/product/ers.md`
    - `src/*/CONTEXT.md`
    - `docs/architecture/adr/`
-   - `docs/agents/`
+   - `.agents/agents/`
    - `.agents/skills/`
 5. Report what was changed and what intentionally stayed untouched.
 
@@ -49,4 +49,4 @@ When using this skill, respond with:
 
 ## Reference
 
-See [../../../mapeo de Specs.md](../../../mapeo%20de%20Specs.md).
+See [../../../README/mapeo de Specs.md](../../../README/mapeo%20de%20Specs.md).
